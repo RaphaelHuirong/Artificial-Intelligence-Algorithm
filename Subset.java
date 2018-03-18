@@ -3,13 +3,13 @@ import java.util.ArrayList;
 
 public class Subset {
     public List<String> subSets(String set) {
-        List<String> result = new ArrayList<>();
+        List<String> strings = new ArrayList<>();
         if (set == null ) {
-            return result;
+            return strings;
         }
         StringBuilder sb = new StringBuilder();
-        subset(set, 0, sb, result);
-        return result;
+        subset(set, 0, sb, strings);
+        return strings;
     }
     private void subset(String set, int index, StringBuilder sb, List<String> result) {
         if (index == set.length()) {
