@@ -1,11 +1,17 @@
+import java.util.List;
+
 public class Main {
     public static void main(String[] args){
-        int[][] testCase = {{1,3,5,7},{2,4,8,9},{3,5,11,15},{6,8,13,18}};
-        int k = 9;
-        BestFirstSearch test = new BestFirstSearch();
-        System.out.println(test.kthSmallest(testCase, k));
-        int n = 4;
-        Nqueens test2 = new Nqueens();
-        System.out.println(test2.nqueens(n));
+        Tuple tuple1 = new Tuple("abc", 10);
+        Tuple tuple2 = new Tuple("aaa", 12);
+        Tuple tuple3 = new Tuple("bbb", 10);
+        Tuple tuple4 = new Tuple("ccc", 4);
+        Tuple[] input = new Tuple[] {tuple1, tuple2, tuple3, tuple4};
+        FindKSmallest test = new FindKSmallest();
+        List<Tuple> result = test.findKSmallest(input, 2);
+        for (int i = 0; i < result.size(); i++) {
+            System.out.println(result.get(i).id);
+        }
     }
+
 }
